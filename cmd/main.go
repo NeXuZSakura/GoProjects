@@ -41,7 +41,7 @@ func AllOperation(fst *int, op *string, sec *int) {
 }
 
 func ScanInt(a *int) {
-	_, err := fmt.Scan(&*a)
+	_, err := fmt.Scan(a)
 	if err != nil {
 		fmt.Println("Некорректное значение. Пожалуйста, введите числовое значение.")
 		os.Exit(1)
@@ -49,7 +49,7 @@ func ScanInt(a *int) {
 }
 
 func ScanStr(a *string) {
-	_, err := fmt.Scan(&*a)
+	_, err := fmt.Scan(a)
 	if err != nil {
 		fmt.Println("Введено некоректное значение!")
 		os.Exit(2)
