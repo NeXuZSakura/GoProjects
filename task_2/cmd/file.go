@@ -6,7 +6,7 @@ func findKthLargest(nums []int, k int) int {
 }
 
 func quickSort(nums []int, start int, last int) []int {
-	if start > last {
+	if start < last {
 		var root int
 		nums, root = partition(nums, start, last)
 		nums = quickSort(nums, start, root-1)
