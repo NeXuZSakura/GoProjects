@@ -1,6 +1,15 @@
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 func findKthLargest(nums []int, k int) int {
+	if len(nums) == 0 {
+		fmt.Println("Ошибка, ваш массив пустой!")
+		os.Exit(1)
+	}
 	nums = quickSort(nums, 0, len(nums)-1)
 	return nums[len(nums)-k]
 }
